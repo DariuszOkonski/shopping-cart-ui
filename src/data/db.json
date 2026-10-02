@@ -1,16 +1,6 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Wireless Headphones",
-      "description": "Noise-cancelling headphones with deep bass and Bluetooth 5.0 support.",
-      "price": 59.99,
-      "quantity": 25,
-      "category": "Audio",
-      "rating": 4.5,
-      "image": "images/product-1.png"
-    },
-    {
       "id": 2,
       "name": "Bluetooth Speaker",
       "description": "Portable speaker with crisp sound and 12-hour battery life.",
@@ -59,6 +49,12 @@
       "category": "Adapters",
       "rating": 4.1,
       "image": "images/product-6.png"
+    },
+    {
+      "name": "Product One",
+      "description": "Test description",
+      "price": 10,
+      "id": 7
     }
   ]
 }
