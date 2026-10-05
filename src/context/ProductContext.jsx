@@ -1,7 +1,6 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
-// eslint-disable-next-line react-refresh/only-export-components
-export const ProductContext = createContext();
+const ProductContext = createContext();
 
 export function ProductProvider({ children }) {
   const [products, setProducts] = useState([]);
@@ -41,3 +40,8 @@ export function ProductProvider({ children }) {
     </ProductContext.Provider>
   );
 }
+
+// eslint-disable-next-line react-refresh/only-export-components
+export const useProducts = () => {
+  return useContext(ProductContext);
+};
