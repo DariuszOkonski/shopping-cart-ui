@@ -5,7 +5,7 @@ import { useState } from "react";
 const Header = () => {
   const [showDropdown, setShowDropdown] = useState(false);
 
-  const { cart } = useCart();
+  const { cart, removeFromCart } = useCart();
 
   const itemCount = cart.reduce((acc, item) => acc + item.qty, 0);
   const total = cart
@@ -49,6 +49,13 @@ const Header = () => {
                             {item.qty} x ${item.price}
                           </p>
                         </div>
+
+                        <button
+                          onClick={() => removeFromCart(item.id)}
+                          className="cursor-pointer text-sm text-red-500 hover:underline"
+                        >
+                          Remove
+                        </button>
                       </li>
                     ))}
                   </ul>
